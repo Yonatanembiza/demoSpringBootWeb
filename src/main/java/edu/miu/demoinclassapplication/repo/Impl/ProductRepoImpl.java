@@ -44,7 +44,7 @@ public class ProductRepoImpl implements ProductRepo {
 
     @Override
     public void delete(int id) {
-        var product =products
+        var product = products
                 .stream()
                 .filter(l -> l.getId() == id)
                 .findFirst().get();
