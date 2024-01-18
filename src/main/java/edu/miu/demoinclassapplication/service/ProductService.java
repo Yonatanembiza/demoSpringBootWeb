@@ -1,10 +1,11 @@
 package edu.miu.demoinclassapplication.service;
 
 import edu.miu.demoinclassapplication.entity.Product;
+import edu.miu.demoinclassapplication.entity.dto.response.ProductDto;
 
 import java.util.List;
 
 public interface ProductService {
     List<Product> findAll();
-    Product findById(int id);
+    ProductDto findById(int id);
 }

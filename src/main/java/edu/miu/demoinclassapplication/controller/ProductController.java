@@ -1,6 +1,7 @@
 package edu.miu.demoinclassapplication.controller;
 
 import edu.miu.demoinclassapplication.entity.Product;
+import edu.miu.demoinclassapplication.entity.dto.response.ProductDto;
 import edu.miu.demoinclassapplication.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,7 +22,7 @@ public class ProductController {
         return productService.findAll();
     }
     @GetMapping("/{id}")
-    public Product findById(@PathVariable("id") int id){
+    public ProductDto findById(@PathVariable("id") int id){
         return productService.findById(id);
     }
 }
